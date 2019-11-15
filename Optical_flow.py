@@ -51,12 +51,10 @@ while(1):
     #     drawing=False
 cv.destroyAllWindows()
 
-mask_shitomasi = np.zeros_like(frame.shape)
-# mask_shitomasi = cv.cvtColor(mask_shitomasi, cv.COLOR_BGR2GRAY)
+mask_shitomasi = np.zeros_like(frame)
+mask_shitomasi = cv.cvtColor(mask_shitomasi, cv.COLOR_BGR2GRAY)
 mask_shitomasi[lines[0][0][1]:lines[0][1][1],lines[0][0][0]:lines[0][1][0]] = 255
-# mask_shitomasi = cv.normalize(src=mask_shitomasi, dst=None, alpha=0, beta=255, norm_type=cv.NORM_MINMAX, dtype=cv.CV_8UC1)
-
-print(type(mask_shitomasi))
+mask_shitomasi = cv.normalize(src=mask_shitomasi, dst=None, alpha=0, beta=255, norm_type=cv.NORM_MINMAX, dtype=cv.CV_8UC1)
 
 cv.namedWindow("Frame")
 cv.imshow("Frame", mask_shitomasi)
@@ -83,14 +81,14 @@ color = np.random.randint(0,255,(100,3))
 # Take first frame and find corners in it
 ret, old_frame = cap.read()
 old_gray = cv.cvtColor(old_frame, cv.COLOR_BGR2GRAY)
-p0 = cv.goodFeaturesToTrack(old_gray, mask = None, **feature_params)
+p0 = cv.goodFeaturesToTrack(old_gray, **feature_params)
 
 
 # Create a mask image for drawing purposes
 mask = np.zeros_like(old_frame)
 
 while(1):
-    print(lines)
+    # print(lines)
     ret,frame = cap.read()
     frame_gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
     # calculate optical flow

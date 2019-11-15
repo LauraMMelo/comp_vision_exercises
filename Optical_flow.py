@@ -56,10 +56,10 @@ mask_shitomasi = cv.cvtColor(mask_shitomasi, cv.COLOR_BGR2GRAY)
 mask_shitomasi[lines[0][0][1]:lines[0][1][1],lines[0][0][0]:lines[0][1][0]] = 255
 mask_shitomasi = cv.normalize(src=mask_shitomasi, dst=None, alpha=0, beta=255, norm_type=cv.NORM_MINMAX, dtype=cv.CV_8UC1)
 
-cv.namedWindow("Frame")
-cv.imshow("Frame", mask_shitomasi)
-cv.waitKey(0)
-cv.destroyAllWindows()
+# cv.namedWindow("Frame")
+# cv.imshow("Frame", mask_shitomasi)
+# cv.waitKey(0)
+# cv.destroyAllWindows()
 
 
 # params for ShiTomasi corner detection

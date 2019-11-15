@@ -1,12 +1,10 @@
+'''
+Baseado no exemplo de Fluxo Óptico disponível no site do OpenCV: https://docs.opencv.org/3.4/d4/dee/tutorial_optical_flow.html
+'''
+
 import numpy as np
 import cv2 as cv
-import argparse
 
-# parser = argparse.ArgumentParser(description='This sample demonstrates Lucas-Kanade Optical Flow calculation. \
-#                                               The example file can be downloaded from: \
-#                                               https://www.bogotobogo.com/python/OpenCV_Python/images/mean_shift_tracking/slow_traffic_small.mp4')
-# parser.add_argument('image', type=str, help='path to image file')
-# args = parser.parse_args()
 lines = []
 drawing = False
 point1 = ()

@@ -1,45 +1,45 @@
 # Computer Vision Exercises
 
-Solução para o teste de Visão Computacional
+Solutions for the computer vision tests
 
-## 0) Dependências
-OpenCV -v=4.0.0
+## 0) Dependencies
+OpenCV -v=4.0.0 
 tkinter -v=8.6
 
 
-##  1) Optical flow e tracking
+##  1) Optical flow and tracking
 
-O script `Optical_flow.py` roda o cálculo do Fluxo óptico esparso pelo método Lucas Kanade. Passos:
+The script `Optical_flow.py` runs the Optical Fluck computation through the Lucas Kanade method. Steps:
 
-1. No terminal, na pasta raiz do repositório, rodar `python Optical flow.py`. A webcam tirará uma foto.
-2. Use o mouse para demarcar um retângulo com o objeto a ser traçado. 1 clique para iniciar, 1 clique para finalizar. 
-3. Pressione 'c'. O objeto será rastreado.
-4. Pressione Ctrl+c no terminal para parar.
+1. In the terminal, on the root folder, run `python Optical flow.py`. The webcam will take a picture.
+2. Use the mouse to mark a rectangle with the object to be traced. Click once to start, then once to finish
+3. Press 'c'. The object will then bem traced.
+4. Press Ctrl+c in the terminal to stop.
 
 ##  2) Image Stitching
 
-O script `Image_stitching.py` realiza o stitching. Passos:
+The script `Image_stitching.py` does o stitching. Steps:
 
-1. No terminal, na pasta raiz do repositório, rodar `python Image_stitching.py`. 
-2. Selecione na janela que aparecer as imagens que deseja costurar e pressione Abrir.
-3. A imagem costurada aparecerá na tela e salvará um arquivo `output.png`
+1. In the terminal, on the root folder, run `python Image_stitching.py`. 
+2. Select in the window the images that you want to stitch and press Open.
+3. The stitched image should appear in the screen and then get saved as `output.png`
 
 ##  3) Object Detection
 
-O script `Object_detection.py` roda a YOLOv3-tiny através do módulo Deep Neural Network do OpenCV. 
-A YOLO possui uma série de arquiteturas disponíveis, todas treinadas no COCO Dataset trainval, chegando a uma
-performance de até 57.9 *mean average precision* para a YOLOv3-608 e de 60.6 para a YOLOv3-spp, no COCO Dataset test-dev, 
-ambas podendo rodar a 20 FPS em uma GPU Pascal Titan X. No entanto, devido aos recursos 
-limitados do computador onde estes exemplos foram desenvolvidos, a YOLOv3-tiny foi escolhida.
+The script `Object_detection.py` runs YOLOv3-tiny through the Deep Neural Network module from OpenCV. 
+YOLO has a set of architectures available, all trained in the COCO Dataset trainval, with a performance up to
+57.9 *mean average precision* for the YOLOv3-608, and of 60.6 for the YOLOv3-spp, in COCO Dataset test-dev,
+both being able to run at 20 FPS in a Pascal Titan X GPU. Due to the limited resources of the computer 
+where these examples were developed, YOLOv3-tiny was chosen.
 
-A YOLOv3-tiny consegue uma performance de 33.1 mAP e pode rodar até 220 FPS. O computador onde este 
-script foi desenvolvido conseguiu 4 FPS, e possui as seguintes specs:
+A YOLOv3-tiny reaches a performance of 33.1 mAP and may run up to 220 FPS. The computer where this
+scipt was developed managed to run at 4 FPS, and has the following settings:
 
 - Intel Core i3-5005 @ 2GHz
-- 12Gb Memória RAM
-- GPU Integrada (Não utilizada neste script)
+- 12Gb RAM memory
+- On-board GPU (Not used in this script script)
 
 
-1. No terminal, na pasta raiz do repositório, rodar `python Object_detection.py`. Uma janela com a webcam aparecerá. Tente pôr objetos como celular ou uma caneca na frente da câmera.
-2. Para encerrar pressione 'c'. O terminal imprimirá um relatório simples com a taxa de FPS durante o script.
+1. On terminal, in the root folder, run `python Object_detection.py`. A webcam window will appear. Try showing objects such as a phone or a mug in front of the camera
+2. To finish, press 'c'. The terminal will then print a simple report with the FPS rate during the script runtime.
 
